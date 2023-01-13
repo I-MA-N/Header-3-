@@ -1,0 +1,44 @@
+.top .menu {
+    width: 35px;
+    height: 35px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    cursor: pointer;
+}
+
+.menu .line {
+    width: 6px;
+    height: 6px;
+    background-color: #f2f2f2;
+    border-radius: 50px;
+    transition: width 1s ease-out;
+}
+
+/* delay */
+.menu .middle-line {
+    transition-delay: .5s;
+} 
+
+.menu .bottom-line {
+    transition-delay: 1s;
+}
+
+/* hover */
+.menu:hover .top-line {
+    width: 35px;
+}
+
+.menu:hover .middle-line {
+    width: 30px;
+}
+
+.menu:hover .bottom-line {
+    width: 20px;
+}
+
+@media screen and (min-width:501px) {
+    .top .menu {
+        display: none;
+    }
+}

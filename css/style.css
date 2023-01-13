@@ -1,0 +1,188 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@600&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Open Sans', sans-serif;
+}
+/* End of main-styles */
+
+
+header {
+    width: 100%;
+    height: 800px;
+    background-image: url(../pic/16324604_rm405-a01b-mockup.jpg);
+    background-position: center;
+    background-size: cover;
+    display: grid;
+    grid-template-columns: repeat(8, 1fr);
+}
+
+.box {
+    background-color: rgba(0, 0, 0, .8);
+    grid-column: span 5;
+}
+
+.container {
+    width: 95%;
+    height: 100%;
+    margin: 0 auto;
+    color: white;
+}
+
+
+/* Top section */
+.top {
+    height: 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.top .brand-name {
+    font-style: italic;
+    font-size: 40px;
+}
+
+.top ul {
+    width: 60%;
+    display: flex;
+    justify-content: space-between;
+    list-style: none;
+}
+
+.top ul li {
+    padding: 5px;
+}
+
+.top ul li:hover {
+    color: black;
+    background-image: linear-gradient(45deg , rgb(31, 31, 31) 40%, rgb(150, 150, 150));
+}
+
+.top ul li a {
+    text-decoration: none;
+    color: white;
+    font-size: 16px;
+}
+
+
+/* Bottom section */
+.bottom {
+    height: 85%;
+    margin-top: 35px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.left-content {
+    width: 30%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.left-content .title {
+    font-size: 20px;
+}
+
+.left-content .sub-title {
+    height: 450px;
+    writing-mode: vertical-rl;
+    transform: rotate(180deg);
+    text-align: center;
+    padding-top: 35px;
+}
+
+/* ------------------------------- */
+
+.right-content {
+    width: 70%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.right-content .slogan {
+    font-size: 25px;
+}
+
+.right-content h4 {
+    text-align: center;
+}
+
+.right-content .images {
+    width: 100%;
+    height: 40%;
+    display: flex;
+    justify-content: space-between;
+
+}
+
+.right-content .image-prop {
+    width: 30%;
+    height: 200px;
+    background-size: contain;
+    background-position: center;
+    clip-path: circle(30% at 50% 50%);
+}
+
+.right-content .image1 {
+    background-image: url(../pic/chic-modern-luxury-aesthetics-style-living-room-blue-tone.jpg);
+}
+
+.right-content .image2 {
+    background-image: url(../pic/empty-modern-room-with-furniture.jpg);
+}
+
+.right-content .image3 {
+    background-image: url(../pic/17609910_rm417-e136-mockup.jpg);
+}
+
+@media screen and (max-width:900px) {
+    header {
+        background-position: right;
+    }
+    
+    .left-content .title {
+        font-size: 18px;
+    }
+    .left-content .sub-title {
+        font-size: 15px;
+    }
+
+    .right-content .slogan {
+        font-size: 20px;
+    }
+    .right-content h4 {
+        font-size: 15px;
+    }
+}
+
+@media screen and (max-width:700px) {
+    .box {
+        grid-column: 1/-1;
+    }
+}
+
+@media screen and (max-width:500px) {
+    .top {
+        justify-content: space-evenly;
+    }
+    .top ul {
+        display: none;
+    }
+
+    .left-content {
+        display: none;
+    }
+
+    .right-content {
+        width: 100%;
+    }
+}
